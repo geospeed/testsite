@@ -1,0 +1,966 @@
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Raleway:400,800,900");
+
+/* 1. Define the font family */
+@font-face {
+    font-family: 'Recoleta';
+    src: url('fonts/recoleta-regular.woff2') format('woff2'),
+        url('fonts/recoleta-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/* 2. Apply it to your footer or headings */
+.footer-container p {
+    font-family: 'Recoleta', serif;
+    font-size: .9rem;
+}
+
+/* Variables & Global Settings */
+:root {
+    --primary-bg: #FFFDFA;
+    --heading-color: #43493F;
+    --body-color: #5A5858;
+    --gold: #A4804E;
+    --transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--body-color);
+    font-family: 'Recoleta', serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Scroll Animation Hooks */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: var(--transition);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Header & Nav */
+.site-header {
+    position: absolute;
+    width: 100%;
+    padding: 40px 5%;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #FFF;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    font-size: 0.9rem;
+}
+
+.site-logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.logo .accent {
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 35px;
+}
+
+.nav-links a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+/* Apply Recoleta (fallback to serif) to the link  */
+.nav-links a {
+    font-family: 'Recoleta', serif;
+    font-weight: 1000;
+    font-style: normal;
+}
+
+/* .mobile-toggle {
+    color: #FFF;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    display: none;
+} */
+
+.close-icon {
+    position: relative;
+    z-index: 1002;
+    font-size: 36px;
+}
+
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Carousel styles */
+.carousel {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 75%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #FFF;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 888px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 4;
+    min-width: 66px;
+    font-size: 46px;
+    line-height: 1;
+    /* transition: background 0.3s ease, transform 0.3s ease; */
+}
+
+.carousel-control.prev {
+    left: 25px;
+    z-index: 7;
+    opacity: 0.3;
+}
+
+.carousel-control.next {
+    right: 25px;
+    z-index: 8;
+    opacity: 0.3;
+}
+
+.carousel-control:hover {
+    transform: translateY(-50%) scale(1.02);
+    /* background: rgba(0, 0, 0, 0.5); */
+}
+
+/* Long SVG arrow styling */
+.carousel-control svg {
+    width: 110px;
+    height: 28px;
+    display: block;
+}
+
+.carousel-control svg .shaft {
+    stroke: #bdbdbd;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.carousel-control svg .head {
+    fill: #bdbdbd;
+}
+
+.carousel-control:hover svg .shaft {
+    stroke: #ffffff;
+}
+
+.carousel-control:hover svg .head {
+    fill: #ffffff;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 22px;
+    z-index: 6;
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.carousel-dots .dot.active {
+    background: #fff;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+}
+
+.hero-content {
+    position: relative;
+    color: #FFF;
+    z-index: 10;
+}
+
+.subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-family: 'Recoleta', serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.hero-title i {
+    font-style: italic;
+}
+
+/* Content Grid Section */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+
+.work-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: -100px;
+    margin-bottom: 20px;
+}
+
+.about-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-bottom: 60px;
+}
+
+.bannercontainer {
+    max-width: 1140px;
+    margin: 0;
+
+}
+
+.split-intro {
+    padding: 50px 0;
+}
+
+.split-grid,
+.split-grid-romantic {
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* grid-template-rows: auto; */
+    grid-template-columns: 3fr 7fr;
+    gap: 80px;
+    align-items: start;
+}
+
+
+.about-section-heading,
+.works-section-heading {
+    font-family: 'Recoleta', serif;
+    font-size: 1.5rem;
+    color: var(--heading-color);
+    font-weight: 500;
+    text-align: center;
+
+}
+
+.romantic-heading {
+    font-family: 'Recoleta', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* padding-left: 80px; */
+    color: black;
+    line-height: 35px;
+}
+
+.about-description {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+
+}
+
+.romantic-description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    /* margin-left: 80px; */
+}
+
+.works-description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+.section-heading {
+    /* font-family: 'Recoleta', serif;
+    font-size: 1.8rem;
+    color: var(--heading-color);
+    font-weight: 500; */
+
+    font-family: 'Recoleta', serif;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 700;
+    padding-left: 80px;
+
+}
+
+
+
+/*footer*/
+/* Container and Section Setup */
+.site-footer {
+    background-color: #f9f9f9;
+    /* Light background for a clean look */
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid #eee;
+
+}
+
+.footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 1.2rem
+}
+
+/* Social Icons List */
+.icons {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    /* Spacing between icons */
+}
+
+.icons li {
+    display: inline-block;
+}
+
+/* Icon Links Styling */
+.icons a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    /* Icon size */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover Effect: Subtle lift and slight fade */
+.icons a:hover {
+    transform: translateY(-5px);
+    opacity: 0.8;
+}
+
+/* Hide the accessibility label text but keep it for screen readers */
+.icons .label {
+    display: none;
+}
+
+/* Copyright Text */
+.footer-container p {
+
+    color: #666;
+    margin-top: 20px;
+
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 480px) {
+    .icons {
+        gap: 15px;
+    }
+
+    .icons a {
+        font-size: 1.2rem;
+    }
+}
+
+/*end footer*/
+.description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.location-tag {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--heading-color);
+}
+
+/* Smaller photo container inside the split-intro section */
+/* .split-intro .photo-container {
+    max-width: 920px;
+    margin: 28px auto 0;
+    padding: 0 12px;
+} */
+
+
+
+/* .split-intro .photo-container {
+    max-width: 930px;
+    height: 200px;
+    margin: 30px 23px 20px 100px;
+    padding: 5px 5px 5px 5px;
+} */
+
+/* .split-intro .photo-container .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+} */
+
+
+.split-intro .photo-container .photo-grid {
+    display: grid;
+    /* opacity: 80%; */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 5px 5px 15px;
+}
+
+.photo-container-gallery .photo-grid {
+    display: flex;
+}
+
+
+
+
+.split-intro .photo-container .photo-item {
+    height: 200px;
+    /* reduced from global 500px */
+}
+
+
+
+/* Gallery */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 60px;
+}
+
+.photo-item {
+    overflow: hidden;
+    height: 500px;
+    transition-delay: calc(var(--order) * 150ms);
+    /* Staggered effect */
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 2 / 3;
+    /* This ensures the image fills the vertical box without squishing */
+    transition: transform 1.2s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.center-btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 16px 36px;
+    border: 1px solid #DCDCDC;
+    text-decoration: none;
+    color: var(--heading-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: var(--heading-color);
+    color: #FFF;
+}
+
+/* Ensure the video fills its 70% container properly */
+.video-container video {
+    width: 400px;
+    height: 800px;
+    display: block;
+    border-radius: 8px;
+    object-fit: fill;
+    transform: rotate(-90deg);
+    margin-left: 140px;
+    margin-top: -190px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+
+}
+
+.hero-video-container {
+    /* position: absolute; */
+    object-fit: cover;
+    width: 100%;
+    height: 1500px;
+    margin-top: -592px;
+    overflow: hidden;
+}
+
+/* gallery coding */
+/* Container to handle side spacing */
+.photo-container-gallery {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* The Grid System */
+.photo-grid-gallery {
+    display: grid;
+    /* This creates columns that are at least 300px wide. 
+       If there isn't enough space, they stack automatically. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    /* Space between photos */
+}
+
+/* Individual Item Styling */
+.photo-item-gallery {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    /* Smooth professional edges */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.photo-item-gallery img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    /* Ensures images fill the box without distortion */
+    transition: transform 0.5s ease;
+}
+
+/* Hover Effect for Interaction Design */
+.photo-item-gallery:hover img {
+    transform: scale(1.05);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+    .photo-grid-gallery {
+        grid-template-columns: 1fr;
+        /* Force 1 column on very small phones */
+        gap: 15px;
+    }
+}
+
+/* close gallery coding */
+
+
+/* Footer */
+.site-footer {
+    padding: 80px 0;
+    background-color: var(--primary-bg);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+
+/* Responsive Logic */
+
+@media (max-width: 1024px) {
+    .split-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: 170px;
+    }
+
+    .split-grid-romantic {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .photo-container-gallery {
+        margin-top: -78px;
+    }
+
+    .video-container {
+        margin-top: -190px;
+    }
+
+    .romantic-description {
+
+        margin-bottom: 189px;
+        /* margin-left: 80px; */
+    }
+}
+
+/* @media (max-width: 1180px) {
+    .split-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: 225px;
+    }
+} */
+
+
+
+
+
+@media (max-width: 991px) {
+    .split-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: -570px;
+
+    }
+
+    .section-heading {
+
+        padding-left: 5px;
+    }
+}
+
+/* 
+@media (max-width: 991px) {
+    .split-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: -33px;
+    }
+
+    .section-heading {
+
+        padding-left: 5px;
+    }
+} */
+
+
+
+.hero-title {
+    font-size: 2.5rem;
+}
+
+/* .nav-links {
+        display: none;
+    } */
+
+.mobile-toggle {
+    display: block;
+}
+}
+
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-container video {
+        width: 200px;
+        height: 380px;
+        margin-left: 90px;
+        margin-top: -90px;
+    }
+
+
+
+    .container {
+        padding: 20px;
+    }
+
+    .about-container {
+        padding-right: 20px;
+    }
+}
+
+/* Additional small adjustments for very small screens iphone 12 pro*/
+/* iPhone 12 Pro Media Query (Logical width: 390px) */
+@media (width: 390px) and (height: 844px) {
+
+    /* 1. Adjust Typography for smaller screens */
+    .section-heading,
+    .about-section-heading,
+    .romantic-heading {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        /* margin-left: -100px; */
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    /* 2. Fix the Split Grid (Stack columns vertically) */
+    .split-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .col-left,
+    .col-right {
+        width: 100%;
+        padding: 0 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    /* 3. Hero Section Height Adjustment */
+    .hero {
+        height: 70vh;
+        /* Prevents hero from being too long on tall iPhones */
+    }
+
+    .carousel-slide img {
+        height: 70vh;
+        object-fit: cover;
+    }
+
+    /* 4. Navigation & Mobile Menu */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        /* Hide off-screen */
+        width: 80%;
+        height: 100vh;
+        background: #fff;
+        /* Or your brand color */
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.4s ease-in-out;
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.show {
+        right: 0;
+        /* Slide in */
+    }
+
+    .mobile-toggle {
+        display: block;
+        cursor: pointer;
+        font-weight: 600;
+        z-index: 1001;
+    }
+
+    /* 5. Gallery Grids */
+    .photo-grid-gallery,
+    .photo-grid {
+        grid-template-columns: 1fr;
+        /* Single column for photos */
+        gap: 15px;
+    }
+
+    .video-container {
+        margin-top: 20px;
+        margin-right: 20px;
+        width: 100%;
+
+
+    }
+
+    /* 6. General Spacing */
+    .container,
+    .about-container {
+        padding: 40px 20px;
+
+    }
+}
+
+/* end iPhone 12 Pro Media Query (Logical width: 390px) */
+@media (max-width: 991px) {
+    .split-intro .photo-container .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .split-intro .photo-container .photo-item {
+        height: 160px;
+    }
+}
+
+
+/*/////////GEO CSS //////////////*/
+@media only screen and (min-device-width: 380px) and (max-device-width: 640px) and (orientation: portrait) {
+
+    /* 4. Navigation & Mobile Menu */
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        /* Hide off-screen */
+        width: 100vw;
+        height: 100vh;
+        background: #fff;
+        color: black;
+        text-align: center;
+        font-size: 48px;
+        /* Or your brand color */
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.4s ease-in-out;
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links a {
+        color: black;
+        font-size: 36px;
+    }
+
+    .section-heading {
+
+        padding-left: 5px;
+    }
+
+    .hero-video-container {
+        /* height: 1400px; */
+    }
+}

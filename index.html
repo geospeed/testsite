@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onst Wedding Photography</title>
+    <meta name="description" content="Onst Wedding Photography specializes in candid wedding photography that tells your story with authenticity and emotion. We capture the essence of your love, laughter, tears, and unforgettable moments.Since 2013 || Turning Moments in to Stories
+500+ Stories Captured
+Chennai & Worldwide || Packages from 1Lakhs">
+    <link rel="canonical" href="https://onstwedding.com/">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/bootnavbar.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
+    <!-- Recoleta webfont -->
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/recoleta">
+
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <script type="application/ld+json">
+        {
+            "@context": "",
+            "@type": "Organization",
+            "name": "Onst Wedding Photography",
+            "url": "https://onstwedding.com/",
+            "logo": "https://onstwedding.com/logo.jpg",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+919003073474",
+                "contactType": "customer service"
+            }
+        }
+    </script>
+
+
+</head>
+
+
+<script>
+    // Mobile Menu Toggle Logic
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            // Optional: Change "MENU" text to "CLOSE"
+            mobileToggle.textContent = navLinks.classList.contains('show') ? 'CLOSE' : 'MENU';
+        });
+    }
+
+    // Close mobile menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+            mobileToggle.textContent = 'MENU';
+        });
+    });
+</script>
+
+
+<body>
+
+    <!-- <header class="site-header">
+        <nav class="navbar">
+            <div class="logo"><img src="logo.jpg" alt="Onst logo" class="site-logo"></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#films">Films</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-toggle">MENU</div>
+
+        </nav>
+    </header> -->
+
+    <!-- <header id="header" class="site-header">
+    </header> -->
+    <!-- Header Component -->
+    <div id="header-component"></div>
+
+    <!-- <section class="hero" id="home">
+        <div class="hero-image-container">
+            <div class="carousel" aria-roledescription="carousel">
+                <div class="carousel-track">
+                    <div class="carousel-slide active">
+                        <img src="images/onst1.jpg" alt="Wedding Story 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/onst2.jpg" alt="Wedding Story 2">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/onst3.jpg" alt="Wedding Story 3">
+                        <div class="hero-content reveal active">
+            <p class="subtitle">STORIES FROM ONST</p>
+            <h1 class="hero-title">Capturing <br><i>Love</i></h1>
+        </div> 
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/onst4.jpg" alt="Wedding Story 4">
+                    </div>
+                </div>
+
+                <button class="carousel-control prev" aria-label="Previous slide">‹</button>
+                <button class="carousel-control next" aria-label="Next slide">›</button>
+                <div class="carousel-dots" aria-hidden="false"></div>
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+
+    </section> -->
+
+    <section class="hero-video-section">
+        <div class="hero-content reveal active">
+
+            <div class="hero-video-container">
+
+                <video autoplay muted loop playsinline
+                    style="transform: rotate(-90deg); object-fit: cover;width: 100%; height: 100%;"
+                    poster="images/poster.png">
+                    <source src="images/Moments.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <!-- <div class="hero-text-overlay">
+                <p class="subtitle">STORIES FROM ONST</p>
+                <h1 class="hero-title">Capturing <br><i>Love</i></h1>
+
+            </div> -->
+
+    </section>
+
+
+    <section class="split-intro reveal" id="about">
+        <div class="container">
+            <div class="split-grid">
+                <div class="col-left">
+                    <h2 class="section-heading">Weaving Your Love Into Timeless Stories</h2>
+                </div>
+                <div class="col-right">
+                    <p class="description">
+
+                        Your wedding is a joyful adventure — full of belly laughs, spontaneous
+                        dances, and little moments of glorious chaos. We chase the candid grins,
+                        the confetti bursts, and the sneaky, unplanned hugs so your photos bring
+                        the party back to life every time you look at them. At Onst Wedding,
+                        we capture the fun, the feelings, and the sparkle of your day.
+                        <br><br>
+                        Let’s make some magic together — memories that feel as vibrant and
+                        alive as the day you said "I do."
+                        <br><br>
+                        At Onst Wedding, we specialize in candid wedding photography that tells
+                        your story with authenticity and emotion. We don’t just document the day;
+                        we capture the essence of your love, the laughter, the tears, and the moments
+                        in between that make it truly unforgettable.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- <p class="location-tag" style="text-align: center;">SOME WEDDING PHOTOGRAPHY</p>
+        <br><br> -->
+    </section>
+
+    <div class="photo-container-gallery">
+
+        <div class="photo-grid-gallery">
+            <div class="photo-item-gallery">
+                <img src="images/gallery1.jpg" alt="Gallery 1">
+            </div>
+            <div class="photo-item-gallery">
+                <img src="images/gallery2.jpg" alt="Gallery 2">
+            </div>
+            <div class="photo-item-gallery">
+                <img src="images/gallery3.jpg" alt="Gallery 3">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <section class="split-intro reveal" id="about">
+        <section class="about-section ">
+            <div class="about-container">
+                <h2 class="about-section-heading">About Onst Wedding</h2>
+                <div class="about-description">
+                    <br>
+                    <p>Onst Wedding: We don't stage moments; we capture them.
+                        Specializing in honest, emotional storytelling, we turn the moments of your wedding day
+                        into a timeless legacy you can touch and feel. Our lens captures the genuine laughter, the happy
+                        tears, and all the in-between magic.
+
+                        Voted among the best wedding photographers in India, we offer exceptional candid photography,
+                        destination wedding coverage, and cinematic.
+                        Experience the difference. Let's capture your forever.
+
+                    </p>
+                </div>
+            </div>
+
+
+        </section>
+
+        <div class="container">
+            <div class="split-grid-romantic">
+                <div class="col-left">
+                    <h2 class="romantic-heading "> A Time Capsule <br>of Your Best Day</h2>
+
+
+                    <p class="romantic-description">
+
+                        When the <span style="font-family: 'Courier New', Courier, monospace;">f</span>lowers have
+                        faded
+                        and the last toast has been
+                        made, your photos remain as the ultimate
+                        time capsule. We don’t just deliver images; we deliver the feeling of being there all over
+                        again. From the golden hour glow to the blurry, high-octane joy of the late-night celebration,
+                        Onst Wedding bottles that magic so you can pass it down for generations to come.
+
+                    </p>
+
+                </div>
+                <div class="video-container">
+                    <video autoplay muted loop playsinline poster="images/poster.png">
+                        <source src="images/Moments.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- <section class="banner-section reveal">
+        <div class="bannercontainer">
+            <img src="banner.jpg" width="100%" height="300px" alt="Banner Image" class="banner-image">
+        </div>
+    </section> -->
+    <section class="works-section reveal" id="works">
+        <div class="work-container">
+            <h2 class="works-section-heading">Our Portfolio</h2>
+
+            <p class="works-description">A glimpse into the beautiful moments we've captured</p>
+        </div>
+    </section>
+
+    <section class="gallery-section reveal" id="stories">
+
+        <div class="container-grid">
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="images/couple1.jpg" alt="Wedding 1">
+                </div>
+                <div class="photo-item">
+                    <img src="images/couple2.jpg" alt="Wedding 2">
+                </div>
+                <div class="photo-item">
+                    <img src="images/couple3.jpg" alt="Wedding 3">
+                </div>
+            </div>
+            <div class="center-btn reveal">
+                <a href="#" class="btn-outline">See More Galleries</a>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Load Header Component -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('header-component').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading header:', error));
+        });
+    </script>
+    <script src="js/bootnavbar.js"></script>
+    <script>
+        new bootnavbar();
+
+        $(document).on('click', function () {
+            $('.navbar-collapse').removeClass('show');
+
+            console.log("Clicked outside");
+        })
+    </script>
+
+    <footer class="site-footer">
+        <section id="footer" class="footer">
+            <ul class="icons">
+                <!-- Facebook Icon -->
+                <li><i class="fa-brands fa-facebook-f"></i></li>
+
+                <!-- Instagram Icon -->
+                <li><i class="fa-brands fa-instagram"></i></li>
+
+                <!-- Email Icon -->
+                <li><i class="fa-solid fa-envelope"></i></li>
+
+                <!-- LinkedIn Icon -->
+                <li><i class="fa-brands fa-youtube"></i></li>
+
+                <!-- Locate Us Icon (Fixed empty class) -->
+                <li><i class="fa-solid fa-location-dot"></i></li>
+            </ul>
+
+            <div class="footer-container" style="font-family: 'Recoleta', serif;">
+                <p> <span style="font-family: 'Courier New', Courier, monospace;">©</span> 2026 Onst Wedding Photography
+                    &bull; All rights reserved.</p>
+            </div>
+        </section>
+    </footer>
+
+
+
+
+
+
+
+
+    <script>
+        const observerOptions = {
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Robust carousel behavior for hero slides
+        (function () {
+            const track = document.querySelector('.carousel-track');
+            if (!track) return;
+            const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+            const nextBtn = document.querySelector('.carousel-control.next');
+            const prevBtn = document.querySelector('.carousel-control.prev');
+            const dotsWrap = document.querySelector('.carousel-dots');
+            const carousel = document.querySelector('.carousel');
+            const slideCount = slides.length;
+            const intervalMs = 6000;
+            let current = slides.findIndex(s => s.classList.contains('active'));
+            if (current < 0) current = 0, slides[0] && slides[0].classList.add('active');
+            let timer = null;
+            let isTransitioning = false;
+
+            function setActive(index) {
+                // guard and normalize
+                index = ((index % slideCount) + slideCount) % slideCount;
+                slides.forEach((s, i) => s.classList.toggle('active', i === index));
+                current = index;
+                updateDots();
+            }
+
+            function goTo(index) {
+                if (isTransitioning) return;
+                index = ((index % slideCount) + slideCount) % slideCount;
+                if (index === current) return;
+                isTransitioning = true;
+                setActive(index);
+                // allow transition to finish (matches CSS .carousel-slide transition 0.8s)
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 820);
+            }
+
+            function next() {
+                goTo(current + 1);
+            }
+
+            function prev() {
+                goTo(current - 1);
+            }
+
+            function createDots() {
+                dotsWrap.innerHTML = '';
+                slides.forEach((_, i) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'dot';
+                    btn.type = 'button';
+                    btn.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                    btn.addEventListener('click', () => {
+                        goTo(i);
+                        resetTimer();
+                    });
+                    dotsWrap.appendChild(btn);
+                });
+            }
+
+            function updateDots() {
+                const dots = dotsWrap.querySelectorAll('.dot');
+                dots.forEach((d, i) => d.classList.toggle('active', i === current));
+            }
+
+            function startTimer() {
+                if (timer) return;
+                timer = setInterval(next, intervalMs);
+            }
+
+            function stopTimer() {
+                if (!timer) return;
+                clearInterval(timer);
+                timer = null;
+            }
+
+            function resetTimer() {
+                stopTimer();
+                startTimer();
+            }
+
+            createDots();
+            updateDots();
+            startTimer();
+
+            if (nextBtn) nextBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                next();
+                resetTimer();
+            });
+            if (prevBtn) prevBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                prev();
+                resetTimer();
+            });
+
+            if (carousel) {
+                carousel.addEventListener('mouseenter', stopTimer);
+                carousel.addEventListener('mouseleave', startTimer);
+                // allow keyboard left/right navigation when focused
+                carousel.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') {
+                        prev();
+                        resetTimer();
+                    }
+                    if (e.key === 'ArrowRight') {
+                        next();
+                        resetTimer();
+                    }
+                });
+                // make carousel focusable for keyboard support
+                carousel.tabIndex = carousel.tabIndex >= 0 ? carousel.tabIndex : 0;
+            }
+        })();
+    </script>
+
+</body>
+
+</html>

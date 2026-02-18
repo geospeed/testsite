@@ -1,0 +1,68 @@
+<style>
+    /* Make collapse area positionable and place a close button top-right on mobile */
+    #navbarSupportedContent {
+        position: relative;
+
+    }
+
+    #navbarSupportedContent .btn-close {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        z-index: 1051;
+    }
+
+    @media(min-width: 992px) {
+        #navbarSupportedContent .btn-close {
+            display: none;
+        }
+    }
+
+    /* Toggler icon swap: show close icon when expanded */
+    .navbar-toggler .close-icon {
+        display: none;
+        font-size: 1.25rem;
+        line-height: 1;
+
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+        display: none;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .close-icon {
+        display: inline-block;
+    }
+</style>
+<!-- Header Component -->
+
+<header id="header" class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-light " id="main_navbar">
+        <!-- <div class="container-fluid top-navigation"> -->
+
+
+
+        <div class="logo"><img src="images/logo.jpg" alt="Onst logo" class="site-logo"></div>
+        <div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="close-icon"><i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#stories">Stories</a></li>
+                    <li><a href="#films">Films</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
